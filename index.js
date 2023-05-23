@@ -6,29 +6,34 @@ const Square = require('./lib/Square');
 
 
 function generateLogo({ text, textColor, shape, shapeColor }) {
+    const uppercaseText = text.toUpperCase();
     let shapeElement;
+    let textVposition;
   
     if (shape === 'circle') {
       const circle = new Circle(shapeColor, 50);
-      shapeElement = circle.getSVGString();
+      textVposition = "52%";
+      shapeElement = circle.render();
     } else if (shape === 'triangle') {
       const triangle = new Triangle(shapeColor, '150,50 250,150 50,150');
-      shapeElement = triangle.getSVGString();
+      textVposition = "62%";
+      shapeElement = triangle.render();
     } else if (shape === 'square') {
-      const square = new Square(shapeColor, 200, 100);
-      shapeElement = square.getSVGString();
+      const square = new Square(shapeColor, 100, 100);
+      textVposition = "52%";
+      shapeElement = square.render();
     }
   
     const svgString = `
       <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
         ${shapeElement}
-        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="${textColor}" font-size="40">${text}</text>
+        <text x="50%" y="${textVposition}" dominant-baseline="middle" text-anchor="middle" fill="${textColor}" font-size="36">${uppercaseText}</text>
       </svg>
     `;
   
-    fs.writeFile('logo.svg', svgString, (err) => {
+    fs.writeFile(`./examples/${shape}-logo.svg`, svgString, (err) => {
         if (err) throw err;
-        console.log('Generated logo.svg!');
+        console.log(`Generated ${shape}-logo.svg! Find it in the examples folder.`);
     });
 }
 
