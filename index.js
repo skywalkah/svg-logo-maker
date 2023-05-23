@@ -1,8 +1,24 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const Circle = require('./lib/Circle');
+const Triangle = require('./lib/Triangle');
+const Square = require('./lib/Square');
 
 
 function generateLogo({ text, textColor, shape, shapeColor }) {
+    let shapeElement;
+  
+    if (shape === 'circle') {
+      const circle = new Circle(shapeColor, 50);
+      shapeElement = circle.getSVGString();
+    } else if (shape === 'triangle') {
+      const triangle = new Triangle(shapeColor, '150,50 250,150 50,150');
+      shapeElement = triangle.getSVGString();
+    } else if (shape === 'square') {
+      const square = new Square(shapeColor, 200, 100);
+      shapeElement = square.getSVGString();
+    }
+  
     const svgString = `
       <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
         ${shapeElement}
