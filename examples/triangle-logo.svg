@@ -1,6 +1,6 @@
 
       <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-        <polygon points="150,50 250,150 50,150" fill="blue" />
+        <polygon points="150,50 250,150 50,150" fill="green" />
         <text x="50%" y="62%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="36">SWG</text>
       </svg>
     

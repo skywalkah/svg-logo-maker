@@ -26,7 +26,7 @@ npm test
 Tests should pass and you should see this:
 ![A screenshot of the desktop view](assets/test.png)
 ## Video recording
-[Video saved in Google Drive](https://drive.google.com/file/d/1NUuEPccYewk6BmbH0X6IiY42vACjngDz/view)
+[Video saved in Google Drive](https://drive.google.com/file/d/1d-sOIyKqt8mQekYgsDEO5ZHgopL5PI45/view)
 ## Credits
 N/A
 ## License
