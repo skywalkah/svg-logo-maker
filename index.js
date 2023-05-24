@@ -63,7 +63,7 @@ inquirer
     {
       type: 'input',
       name: 'textColor',
-      message: 'Enter the text color keyword or a hex color (include #)):',
+      message: 'Enter the text color keyword or a hex color (include #):',
     },
     {
       type: 'list',
@@ -74,7 +74,7 @@ inquirer
     {
       type: 'input',
       name: 'shapeColor',
-      message: 'Enter the shape color:',
+      message: 'Enter the shape color keyword or a hex color (include #):',
     },
   ])
   // Call the generateLogo() function with the user's input
