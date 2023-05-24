@@ -63,7 +63,7 @@ inquirer
     {
       type: 'input',
       name: 'textColor',
-      message: 'Enter the text color:',
+      message: 'Enter the text color keyword or a hex color (include #)):',
     },
     {
       type: 'list',
